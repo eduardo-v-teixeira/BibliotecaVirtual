@@ -21,5 +21,17 @@ namespace BibliotecaVirtual.Dominio
             Emprestado = true;
         }
 
-    }
+        public void Emprestar()
+        {
+            Emprestado = false;
+        }
+
+        public void Devolver()
+        {
+            Emprestado = false;
+        }
+
+        public override string ToString() {
+            return $"{Titulo} - {Autor} ({Ano}) | {(Emprestado ? "Emprestado" : "Disponível")}";
+        }
 }
