@@ -31,7 +31,9 @@ namespace BibliotecaVirtual.Dominio
             Emprestado = false;
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return $"{Titulo} - {Autor} ({Ano}) | {(Emprestado ? "Emprestado" : "Disponível")}";
         }
+    }
 }
