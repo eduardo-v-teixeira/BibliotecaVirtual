@@ -27,7 +27,14 @@ namespace BibliotecaVirtual.Servicos
                 Console.WriteLine("Nenhum livro cadastrado.");
                 return;
             }
+
+            foreach (var livros in livros)
+            {
+                Console.WriteLine(livros);
+            }
         }
+
+
 
 
 
