@@ -39,9 +39,15 @@ namespace BibliotecaVirtual.Servicos
             var resultado = livros
                 .Where(l => l.Titulo.ToLower().Contains(titulo.ToLower()))
                 .ToList();
-            if (!resultado)
+            if (!resultado.Any())
+            {
+                Console.WriteLine("Nenhum livro encontrado.");
+                return;
+            }
 
+            foreach (var livros in livros) Console.WriteLine(livros);
         }
+
 
 
 
