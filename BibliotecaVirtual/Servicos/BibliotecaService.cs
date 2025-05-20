@@ -34,6 +34,15 @@ namespace BibliotecaVirtual.Servicos
             }
         }
 
+        public void PesquisarPorTitulo(string titulo)
+        {
+            var resultado = livros
+                .Where(l => l.Titulo.ToLower().Contains(titulo.ToLower()))
+                .ToList();
+            if (!resultado)
+
+        }
+
 
 
 
