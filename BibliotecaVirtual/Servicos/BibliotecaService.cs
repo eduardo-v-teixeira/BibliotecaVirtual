@@ -49,7 +49,21 @@ namespace BibliotecaVirtual.Servicos
                 Console.WriteLine(livros);
         }
 
+        public void PesquisarPorTitulos(string titulos)
+        {
+            var resultado = livros.Where(l => l.Titulo.ToLower().Contains(titulos.ToLower())).ToList();
 
+            if (!resultado.Any())
+            {
+                Console.WriteLine("Nenhum livro encontrado.");
+                return;
+            }
+
+            foreach (var livro in resultado)
+            {
+                Console.WriteLine(livro);
+            }
+        }
 
 
 
