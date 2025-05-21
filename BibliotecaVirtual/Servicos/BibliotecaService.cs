@@ -45,7 +45,8 @@ namespace BibliotecaVirtual.Servicos
                 return;
             }
 
-            foreach (var livros in livros) Console.WriteLine(livros);
+            foreach (var livros in livros) 
+                Console.WriteLine(livros);
         }
 
 
