@@ -65,6 +65,25 @@ namespace BibliotecaVirtual.Servicos
             }
         }
 
+        public void EmprestarLivro(string titulo)
+        {
+            var livro = livros.FirstOrDefault(l => l.Titulo.ToLower() == titulo.ToLower());
+
+            if (livros == null)
+            {
+                Console.WriteLine("Livro não encontrado");
+                return;
+            }
+
+            if (livro.Emprestado)
+            {
+                Console.WriteLine("Livro já está emprestado");
+                return;
+            }
+
+            livro.Emprestar();
+            Console.WriteLine("Livro emprestado com sucesso!");
+        }
 
 
 
